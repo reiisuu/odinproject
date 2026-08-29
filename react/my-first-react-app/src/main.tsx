@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
     <Intro />
     <Button text="Hello" color="blue" fontSize={12} />
     <Button />
-  </StrictMode>,
+  </StrictMode>
 )
 
 

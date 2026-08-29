@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Button from './Button.tsx';
+import List from './List.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,8 @@ function App() {
   const handleButtonClick = () => {
     alert("Button clicked");
   }
+
+  const animals = ["Lion", "Cow", "Snake", "Lizard"];
 
   return (
     <>
@@ -123,6 +126,8 @@ function App() {
 
       <Button handleClick={handleButtonClick} />
       <Button handleClick={handleButtonClick} text="In App.tsx" />
+
+      <List animals={animals} />
     </>
   )
 }
