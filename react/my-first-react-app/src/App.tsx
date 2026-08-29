@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Button from './Button.tsx';
 import List from './List.tsx';
+import Key from './Key.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,12 @@ function App() {
   }
 
   const animals = ["Lion", "Cow", "Snake", "Lizard"];
+
+  const todos = [
+    { task: "mow the yard", id: crypto.randomUUID() },
+    { task: "Work on Odin Projects", id: crypto.randomUUID() },
+    { task: "Feed the cat", id: crypto.randomUUID() },
+];
 
   return (
     <>
@@ -128,6 +135,8 @@ function App() {
       <Button handleClick={handleButtonClick} text="In App.tsx" />
 
       <List animals={animals} />
+
+      <Key todos={todos}/>
     </>
   )
 }
